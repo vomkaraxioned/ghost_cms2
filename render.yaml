@@ -8,40 +8,9 @@ services:
     mountPath: /var/lib/ghost/content
     sizeGB: 10 #Feel free to change this to suit your needs.
   envVars:
-    - key: database__client
-      value: pg
-    - key: database__connection__host
-      fromService:
-        type: pserv
-        name: pg
-        property: host
-    - key: database__connection__database
-      value: yugabyte
-    - key: database__connection__user
-      value: admin
-    - key: database__connection__password
-      fromService:
-        type: pserv
-        name: pg
-        envVarKey: eLPHklxJ2cWj39kRmczwxfnPtYKMLT
-
-- type: pserv
-  name: pg
-  plan: standard
-  env: docker
-  repo: https://github.com/render-examples/mysql
-  autoDeploy: false
-  disk:
-    name: pg
-    mountPath: /var/lib/mysql
-    sizeGB: 10
-  envVars:
-    - key: pg_DATABASE
-      value: yugabyte
-    - key: pg_USER
-      value: admin
-    - key: pg_PASSWORD
-      generateValue: true
-    - key: pg_ROOT_PASSWORD
-      generateValue: true
-
+      DB_CLIENT: 'pg'
+      DB_HOST: 'ap-northeast-2.16bffd9f-a8c7-4699-a2f6-51504ab0a509.aws.ybdb.iomysql-db'
+      DB_PORT: '5433'
+      DB_DATABASE: 'yugabyte'
+      DB_USER: 'admin'
+      DB_PASSWORD: 'eLPHklxJ2cWj39kRmczwxfnPtYKMLT'
