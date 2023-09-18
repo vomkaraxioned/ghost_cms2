@@ -9,11 +9,11 @@ services:
     sizeGB: 10 #Feel free to change this to suit your needs.
   envVars:
     - key: database__client
-      value: postgresql
+      value: pg
     - key: database__connection__host
       fromService:
         type: pserv
-        name: postgresql
+        name: pg
         property: host
     - key: database__connection__database
       value: yugabyte
@@ -22,26 +22,26 @@ services:
     - key: database__connection__password
       fromService:
         type: pserv
-        name: postgresql
+        name: pg
         envVarKey: eLPHklxJ2cWj39kRmczwxfnPtYKMLT
 
 - type: pserv
-  name: postgresql
+  name: pg
   plan: standard
   env: docker
   repo: https://github.com/render-examples/mysql
   autoDeploy: false
   disk:
-    name: postgresql
+    name: pg
     mountPath: /var/lib/mysql
     sizeGB: 10
   envVars:
-    - key: postgresql_DATABASE
+    - key: pg_DATABASE
       value: yugabyte
-    - key: postgresql_USER
+    - key: pg_USER
       value: admin
-    - key: postgresql_PASSWORD
+    - key: pg_PASSWORD
       generateValue: true
-    - key: postgresql_ROOT_PASSWORD
+    - key: pg_ROOT_PASSWORD
       generateValue: true
 
