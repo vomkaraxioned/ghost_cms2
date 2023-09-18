@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "This is a template repository for running [Ghost](https://ghost.org) on Render.",
+  "main": "updateConfig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vomkaraxioned/ghost_cms2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vomkaraxioned/ghost_cms2/issues"
+  },
+  "homepage": "https://github.com/vomkaraxioned/ghost_cms2#readme",
+  "dependencies": {
+    "pg": "^8.11.3",
+    "postgresql": "^0.0.1"
+  }
+}
