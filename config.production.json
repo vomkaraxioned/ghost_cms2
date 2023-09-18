@@ -5,13 +5,13 @@
     "host": "0.0.0.0"
   },
   "database": {
-    "client": "mysql",
+    "client": "postgresql",
     "connection": {
-      "host": "mysql-db",
-      "port": 3306,
+      "host": "ap-northeast-2.16bffd9f-a8c7-4699-a2f6-51504ab0a509.aws.ybdb.iomysql-db",
+      "port": 5433,
       "user": "admin",
-      "password": "DATABASE_PASSWORD",
-      "database": "DATABASE_NAME"
+      "password": "eLPHklxJ2cWj39kRmczwxfnPtYKMLT",
+      "database": "yugabyte"
     }
   },
   "mail": {
